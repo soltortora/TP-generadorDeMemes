@@ -10,7 +10,8 @@
 <!--INICIO DIV UNE TODO -->
 <div class="cuerpo">
 <!--INICIO DE HEADER-->
-    <header>
+<div class="meme">
+    <header class="header-container">
         <h1>Generador de Memes</h1>
         <nav>
             <button>Imagen</button>
@@ -21,7 +22,7 @@
     </header>
 <!--FIN DE HEADER -->
 <!--INICIO MAIN TEXTOS-->
-    <section>
+    <section class="">
         <main>
             <div class="meme-container">
                 <div>
@@ -35,9 +36,11 @@
             <button>Descargar</button>
         </main>
     </section>
+</div>
 <!--FIN MAIN-->
 <!--INICIO ASIDE-->
     <aside class="aside-image">
+        <div class="aside hidden">
         <h3>IMAGE</h3>
         <div class="div-url">
             <p>URL</p>
@@ -74,11 +77,78 @@
             <input type="text">
         </div>
         <button>Reestablecer filtros</button>
-<!--FIN ASIDE-->
-        
+        <i></i>
+<!--FIN ASIDE IMAGEN-->
+<!--INICIO TEXTO ASIDE-->
 
+        <h3>TEXTO</h3>
+        <div>
+            <label for="">SUPERIOR</label>
+            <input type="text" id="topText" placeholder="Texto superior">
+            <input type="checkbox" id="hideTopText">
+            <label for="hideTopText">Ocultar texto superior</label>
+        </div>
+        <div>
+            <label for="">INFERIOR</label>
+            <input type="text" name="" id="">
+            <input type="checkbox" id="hideBottonText">
+            <label for="">Ocultar texto inferior</label>
+        </div>
+        <select id="font-Family">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Roboto">Roboto</option>
+            <option value="TimesNewRoman">TimesNewRoman</option>
+            <option value="Bodon1">Bodon1</option>
+        </select>
+        
+        <input type="number" id="fontSize" min="8" max="72" step="2" value="16">
+        <label for="fontSize">Tamaño de fuente(px)</label>
+        <div class="alignText">
+            <button id="alignLeftBtn" class="alignButton">Izquierda</button>
+            <i></i>
+            <button id="alignCenterBtn" class="alignButton">Center</button>
+            <i></i>
+            <button id="alignrightBtn" class="alignButton">Derecha</button>
+            <i></i>
+        </div>
+        <div>
+            <h3>COLOR</h3>
+            <input name="colorDeTexto" type="color" id="text-color">
+            <span>#00000</span>
+        </div>
+        <div>
+            <h3>FONDO</h3>
+            <input name="colorDeFondoDeTexto" type="color" id="text-backgorund-color">
+            <span>#FFFFFF</span>
+        </div>
+        <input type="checkbox" id="hideTopText">
+        <label for="">Fondo Transparente</label>
+        <div>
+            <h3>CONTORNO</h3>
+            <button>NINGUNO</button>
+            <button>CLARO</button>
+            <button>OSCURO</button>
+        </div>
+        <div>
+            <h3>ESPACIADO</h3>
+            <input type="number" id="" aria-label="Espaciado" min="10" max="50" value="35">
+        </div>
+        <div>
+            <h3>INTERLINEADO</h3>
+            <select>
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2">1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+            </select>
+        </div>
+    </div>   
     </aside>
-<!--FIN ASIDE-->
+<!--FIN ASIDE TEXTO-->
 </div><!--FIN DIV UNE TODO-->
     <script src="script.js"></script>
 </body>
