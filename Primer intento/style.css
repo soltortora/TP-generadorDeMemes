@@ -5,48 +5,201 @@
 
 .cuerpo {
     display: flex;
+    background-color: #252935;
 }
 
-.header-container {
+.header-main-container {
     width: 80%;
+    background-color:  rgb(25,30,43); ;
 }
 
-/*HEADER INCIO*/
+/*HEADER*/
 
-.header-container {
-    background-color: red;
+.header-principal {
+    background-color: rgb(25,30,43);
 }
-
-h1 {
+.titulo-h1 {
     text-align: center;
     font-size: 36px;
     font-weight: 600;
     margin: 10px;
     letter-spacing: -1px;
+    color: #ffffff;
 }
 
-/*MAIN*/
+.nav-container {
+    justify-content: center;
+}
 
-.meme {
-    flex-grow: 1;
+.botones-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    
+}
+
+.button {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border: radius 1px;;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.button-botones {
+    border: 0;
+    color:#ffffff;
+    font-family: var(--font-primary);
+    background-color: transparent;
+    display: block;
+    outline: 0;
+    
+}
+
+.fa-solid,
+.fa-regular {
+    color:#ffffff;;
+}
+
+/*FIN DE HEADER*/
+/*INCIO MAIN*/
+
+.main-principal {
+    background-color: #30343f;
+}
+.meme-container {
+    height: 80vh;
+    width: 60%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: var(--color-background);
-    padding: 0 20px;
+}
+    
+.text-container {
+    height: 15%;
+}
+.meme-img {
+    height: 70%;
+    background-color: black;
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
 }
 
-/*INICIO DEL ASIDE*/
+.main-textos {
+    font-family: Impact;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    position: static;
+    padding: 19px 50px;
+    font-size: 48px;
+    text-align: center; 
+}
 
-.aside-image {
-    background-color: blue;
+.button-dowland {
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px 15px;
+    height: auto;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 1px;
+}
+
+/*FIN DE MAIN*/
+
+/*INICIO ASIDE PANELES*/
+
+.asideImg, .asideText {
+    background-color: #2e7d32;
+    left: 76%;
+    overflow-y: scroll;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    width: 40vh;
+}
+
+.aside-container-general {
+    display: block;
+    box-shadow: none;
+    background-color: #252935;
     height: 80%;
     width: 20%;
 }
 
+.panel-aside {
+    width: 260px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color:  #252935;
+    padding: 30px 15px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.aside-titulo-image,
+.aside-titulo-text {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+.panel-control-aside { 
+    color: #ffffff;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.titulo-url {
+    width: 90%;
+    height: 25px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.panel-control1 {
+    margin-bottom: 20px;
+}
+
+.panel-control-columna {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-filtros {
+    margin-top: 15px;
+}
+
+.panel-filtros-color {
+    display: block;
+    font-size: 12px;
+    color: #ffffff;
+}
 
 
-
-
-
+.filtros-input {
+    width: 100%;
+    background-color: #5a5d68;
+    border-radius: 10px;
+    appearance: none;
+    height: 6px;
+    margin-top: 10px;
+}

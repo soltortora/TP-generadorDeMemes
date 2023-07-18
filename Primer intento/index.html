@@ -3,109 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edito de memes</title>
     <link rel="stylesheet" href="style.css">
+    <title>Edito de memes</title>
+    <script src="https://kit.fontawesome.com/1a3d4de621.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--INICIO DIV UNE TODO -->
 <div class="cuerpo">
 <!--INICIO DE HEADER-->
-<div class="meme">
-    <header class="header-container">
-        <h1>Generador de Memes</h1>
-        <nav>
-            <button>Imagen</button>
-            <button>Texto</button>
-            <button>Modo Oscuro</button>
-            <button>Modo Claro</button>
+<div class="header-main-container">
+    <header class="header-principal">
+        <h1 class="titulo-h1">Generador de Memes</h1>
+        <nav class="botones-container nav-container">
+            <button class="button button-botones">Imagen
+                <i class="fa-solid fa-image"></i>
+            </button>
+            <button class="button button-botones">Texto
+                <i class="fa-solid fa-font"></i>
+            </button>
+            <button class="button button-botones">Modo Oscuro
+                <i class="fa-regular fa-lightbulb"></i>
+            </button>
+<!--           <button class="button button-botones">Modo Claro</button>--> 
         </nav>
     </header>
 <!--FIN DE HEADER -->
 <!--INICIO MAIN TEXTOS-->
-    <section class="">
-        <main>
-            <div class="meme-container">
-                <div>
-                    <p>TOP TEXT</p>
-                </div>
-                    <p>BOTTOM TEXT</p>
-                <div>
-
-                </div>
+    <main class="main-principal">
+        <div class="meme-container">
+            <div class="text-container top-text">
+                <p class="main-textos">TOP TEXT</p>
             </div>
-            <button>Descargar</button>
-        </main>
-    </section>
+            <div class="meme-img"></div>
+            <div class="text-container bottom-text">
+                <p class="main-textos">BOTTOM TEXT</p>
+            </div>
+            <button class="text-container button-dowland">Descargar
+                <i class="fa-solid fa-download"></i>
+            </button>
+        </div>
+    </main>
 </div>
 <!--FIN MAIN-->
 <!--INICIO ASIDE-->
-    <aside class="aside-image">
-        <div class="aside hidden">
-        <h3>IMAGE</h3>
-        <div class="div-url">
-            <p>URL</p>
-            <input type="text">
+<aside class="asideImg" id="asideImg">
+    <button></button>
+    <section>
+        <h2 class="aside-titulo-image">IMAGEN</h2>
+        <div>
+            <h3 class="panel-control-aside">URL</h3>
+            <input class="titulo-url" type="text" id="topText">
         </div>
-        <div class="div-background">
-            <p>BACKGROUND</p>
-            <div>
+<!--FONDO-->    
+        <div class="panel-control1">
+            <h3 class="panel-control-aside">FONDO</h3>
+        <div class="panel-control-columna">
                 <div>
-                    <input type="">
+                    <input name="colorDeTexto" type="color" id="text-color">
+                    <span>#00000</span>
+
+                </div>
+                <div>
                     <select>
-                        <option>NONE</option>
+                        <option>NINGUNO</option>
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Aclarar">Aclarar</option>
+                            <option value="Oscurecer">Oscurecer</option>
+                            <option value="Diferencia">Diferencia</option>
+                            <option value="Luminocidad">Luminocidad</option>
+                            <option value="Multiplicar">Multiplicar</option>
                     </select>
                 </div>
             </div>
         </div>
+<!--FILTROS-->        
         <div>
-            <p>FILTERS</p>
-            <label for="">BRIGHTNESS</label>
-            <input type="text">
-            <label for="">OPACITY</label>
-            <input type="text">
-            <label for="">CONTRAST</label>
-            <input type="text" name="" id="">
-            <label for="">BLUR</label>
-            <input type="text" name="" id="">
-            <label for="">SEPIA</label>
-            <input type="text" name="" id="">
-            <label for="">HUE</label>
-            <input type="text" name="" id="">
-            <label for="">SATURATION</label>
-            <input type="text" name="" id="">
-            <label for="">GRAY SCALE</label>
-            <input type="text">
+            <h3 class="panel-control-aside">FILTROS</h3>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">BRILLO</label>
+                <input class="filtros-input" type="text">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">OPACIDAD</label>
+                <input class="filtros-input" type="text">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">CONTRASTE</label>
+                <input class="filtros-input" type="text" name="" id="">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">DESENFOQUE</label>
+                <input class="filtros-input" type="text" name="" id="">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">ESCALA DE GRISES</label>
+                <input class="filtros-input" type="text" name="" id="">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">SEPIA</label>
+                <input class="filtros-input" type="text" name="" id="">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">HUE</label>
+                <input class="filtros-input" type="text" name="" id="">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">SATURADO</label>
+                <input class="filtros-input" type="text">
+            </div>
+            <div class="panel-filtros  panel-filtros-color">
+                <label for="">NEGATIVO</label>
+                <input class="filtros-input" type="text">
+            </div>
+            <div>
+                <button>Reestablecer filtros</button>
+                <i></i>
+            </div>
         </div>
-        <button>Reestablecer filtros</button>
-        <i></i>
+    </section>
+</aside>
 <!--FIN ASIDE IMAGEN-->
 <!--INICIO TEXTO ASIDE-->
-
-        <h3>TEXTO</h3>
+<aside class="asideText" id="asideText">  
+    <section>
+        <h2 class="aside-titulo-text">TEXTO</h2>
         <div>
-            <label for="">SUPERIOR</label>
-            <input type="text" id="topText" placeholder="Texto superior">
+            <h3 class="panel-control-aside">SUPERIOR</h3>
+            <input class="titulo-url" type="text" id="topText" placeholder="Texto superior">
             <input type="checkbox" id="hideTopText">
             <label for="hideTopText">Ocultar texto superior</label>
         </div>
         <div>
-            <label for="">INFERIOR</label>
+            <h3 class="panel-control-aside">INFERIOR</h3>
             <input type="text" name="" id="">
             <input type="checkbox" id="hideBottonText">
             <label for="">Ocultar texto inferior</label>
         </div>
-        <select id="font-Family">
-            <option value="Arial">Arial</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Roboto">Roboto</option>
-            <option value="TimesNewRoman">TimesNewRoman</option>
-            <option value="Bodon1">Bodon1</option>
-        </select>
-        
-        <input type="number" id="fontSize" min="8" max="72" step="2" value="16">
-        <label for="fontSize">Tamaño de fuente(px)</label>
-        <div class="alignText">
+        <div>
+            <select id="font-Family">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Roboto">Roboto</option>
+                <option value="TimesNewRoman">TimesNewRoman</option>
+                <option value="Bodon1">Bodon1</option>
+            </select>
+        </div>
+        <div>
+            <input type="number" id="fontSize" min="8" max="72" step="2" value="16">
+            <label for="fontSize">Tamaño de fuente(px)</label>
+        </div>
+        <div>
             <button id="alignLeftBtn" class="alignButton">Izquierda</button>
             <i></i>
             <button id="alignCenterBtn" class="alignButton">Center</button>
@@ -123,8 +171,10 @@
             <input name="colorDeFondoDeTexto" type="color" id="text-backgorund-color">
             <span>#FFFFFF</span>
         </div>
-        <input type="checkbox" id="hideTopText">
-        <label for="">Fondo Transparente</label>
+        <div>
+            <input type="checkbox" id="hideTopText">
+            <label for="">Fondo Transparente</label>
+        </div>
         <div>
             <h3>CONTORNO</h3>
             <button>NINGUNO</button>
@@ -146,10 +196,10 @@
                 <option value="2.5">2.5</option>
             </select>
         </div>
-    </div>   
-    </aside>
+    </section> 
+</aside>
 <!--FIN ASIDE TEXTO-->
-</div><!--FIN DIV UNE TODO-->
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
